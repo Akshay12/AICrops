@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { DomSanitizer} from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
@@ -7,23 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public http: HttpClient, private sanitizer: DomSanitizer) {
+  }
+  dashBoards: any = {testDashboard: '1a975f5a-faca-4d5f-a0fd-a6da4a904636'};
+  activeDashboard: string = 'testDashboard';
+  embedURL: string = 'https://hlpu3yky42.execute-api.us-east-1.amazonaws.com/LATEST/getDashboardEmbedURL?username=TestUser&password=TestUser01!&dashboardId=';
+  embeddedDashboard: any = '';
   ngOnInit() {
-      var options = {
-        url: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/dashboardId?isauthcode=true&identityprovider=quicksight&code=authcode",
-        container: document.getElementById("dashboardContainer"),
-        parameters: {
-            country: "United States",
-            states: [
-                "California",
-                "Washington"
-            ]
-        },
-        scrolling: "no",
-        height: "700px",
-        width: "1000px"
-    };
+    this.getDashboard('testDashboard');
   }
 
+  getDashboard(dashboard){
+    this.activeDashboard = dashboard;
+    this.http.get(this.embedURL+this.dashBoards[dashboard]).subscribe(data=>{
+      console.log(data);
+      this.embeddedDashboard = this.sanitizer.bypassSecurityTrustResourceUrl(data['EmbedUrl']);
+    });
+  }
 }
