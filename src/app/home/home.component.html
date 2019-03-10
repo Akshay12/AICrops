@@ -1,1 +1,44 @@
-<iframe style="margin: 0 auto;height: -webkit-fill-available; width: 100%;" *ngIf="embeddedDashboard !== ''" [src]="embeddedDashboard"></iframe>
+<div class="header" style="text-align:center">
+  <h1>
+    CROP AI
+  </h1>
+</div>
+
+<br />
+<div class="search">
+  <mat-form-field class="search-form">
+    <input
+      matInput
+      placeholder="Please type in a location or a crop."
+      type="text"
+    />
+  </mat-form-field>
+  <button button="submit" mat-raised-button color="primary">Search</button>
+  <br />
+</div>
+
+<section>
+    <div class="card headers">
+        <span *ngFor="let title of titles">{{title}} </span> 
+    </div>
+
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutWrap
+    fxLayoutGap="0.5%"
+    fxLayoutAlign="center">
+    <mat-card class="card-picture" *ngFor="let picture of pictures">
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+        <span fxFlex="80%">{{ picture.title }}</span>
+      </mat-card-title>
+      <img mat-card-image [src]="picture.img" />
+    </mat-card>
+  </div>
+</section>
+
+<div>
+    footer goes here.
+</div>
+
+<!-- <iframe style="margin: 0 auto;height: -webkit-fill-available; width: 100%;" *ngIf="embeddedDashboard !== ''" [src]="embeddedDashboard"></iframe> -->
