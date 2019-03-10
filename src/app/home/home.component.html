@@ -1,4 +1,4 @@
-<div class="header" style="text-align:center">
+<!--<div class="header" style="text-align:center">
   <h1>
     CROP AI
   </h1>
@@ -38,5 +38,845 @@
 <div>
   footer goes here.
 </div>
-
+-->
 <!-- <iframe style="margin: 0 auto;height: -webkit-fill-available; width: 100%;" *ngIf="embeddedDashboard !== ''" [src]="embeddedDashboard"></iframe> -->
+<div class="home">
+  <div id="menu-btn" data-ga="menuBtnClick" data-ga-cat="navigation" data-ga-label="Navigation menu button clicked"
+    data-ga-target="#menu">
+    <div class="in">
+      <div class="bd">
+        <div class="b-1 b">
+          <span></span>
+        </div>
+        <div class="b-2 b">
+          <span></span>
+        </div>
+        <div class="b-3 b">
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <span class="label">Menu</span>
+  </div>
+
+  <nav>
+    <div id="top-nav">
+      <div class="btn-container"></div>
+
+      <div id="home-btn">
+        <a href="/"><img src="/static/img/logo_sm.png" alt="Data USA" style="width:78px" /></a>
+      </div>
+
+      <div id="cart-btn">
+        <a href="/cart/"></a>
+      </div>
+
+      <div id="search-btn" data-results="search-simple-nav">
+        <a href="/search/?q=" class="m-hotspot"></a>
+        <div class="search-box">
+          <input id="nav-search-input" class="search-input" data-search="simple-nav" type="text"
+            placeholder="Press Enter to refine search" data-ga="navSearchClick" data-ga-cat="navigation"
+            data-ga-label="Search icon clicked" />
+        </div>
+        <div class="search-i"><img src="/static/img/search/search_w.svg" alt="Search" /></div>
+        <!-- <i class="fa fa-search"></i> -->
+      </div>
+      <div id="title-bar">
+        <span>
+          <a href="/"><img src="/static/img/logo_sm.png" alt="Data USA" /></a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <div id="menu">
+    <div class="menu-content">
+      <ul>
+        <li class="profile-sum">
+          <a href="/search/">
+            <h2>Explore</h2>
+          </a>
+          <ul>
+            <li class="geo-sum">
+              <a href="/search/?kind=geo">Locations</a>
+            </li>
+            <li class="naics-sum">
+              <a href="/search/?kind=naics">Industries</a>
+            </li>
+            <li class="soc-sum">
+              <a href="/search/?kind=soc">Occupations</a>
+            </li>
+            <li class="cip-sum">
+              <a href="/search/?kind=cip">Degrees</a>
+            </li>
+            <li class="university-sum">
+              <a href="/search/?kind=university">Universities</a>
+            </li>
+          </ul>
+        </li>
+        <li class="data-sum">
+          <a href="/story/">
+            <h2>Stories</h2>
+          </a>
+        </li>
+        <li class="data-sum">
+          <a href="/map/">
+            <h2>Maps</h2>
+          </a>
+        </li>
+        <li class="data-sum">
+          <a href="/cart/">
+            <h2>Cart</h2>
+          </a>
+        </li>
+        <li class="data-sum">
+          <a href="/about/">
+            <h2>About</h2>
+          </a>
+        </li>
+        <li class="data-sum">
+          <a href="/about/datasets/">
+            <h2>Data</h2>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+
+  </div>
+
+  <div id="search-simple-nav" class="search-body">
+    <div class="no-search-results">No results found</div>
+    <div class="search-results"></div>
+
+    <section class="results-show-all">
+      <a href="/search/">Show all results <span class="more"></span></a>
+    </section>
+  </div>
+
+
+  <div class="bg">
+    <div class="line"></div>
+  </div>
+
+  <div class="home-full">
+
+    <section class="home-desc new">
+      <img class="logo" src="/static/img/home/logo-shadow.png" alt="Data USA" />
+      <h2 class="tagline"><a href="/search">Search</a>, <a href="/map">map</a>, <a
+          href="/profile/geo/chicago-il/?compare=seattle-wa">compare</a>, and <a href="/cart">download</a> U.S. data
+      </h2>
+    </section>
+    <section class="search-home-container new">
+      <div class="search-input-btn">
+        <input placeholder="ex. California, Hospitals, Graphic Design" type="text" data-results="search-home"
+          data-search="home" id="home-search-input" class="search-input" />
+        <a href="/search/" id="search-switch" class="adv" onclick="advSearch.toggle();">Search</a>
+      </div>
+      <div id="search-home" class="search-body">
+        <div class="no-search-results">No results found</div>
+        <div class="search-results"></div>
+      </div>
+      <section class="results-show-all">
+        <a href="/search/" class="pri-link">Show all results <span class="more"></span></a>
+      </section>
+    </section>
+
+  </div>
+
+  <div class="home-collab">
+    <a target="_blank" href="http://www2.deloitte.com/us/en.html"><img id="deloitte"
+        src="/static/img/home/logos/deloitte.png" /></a>
+    <a target="_blank" href="http://macro.media.mit.edu/"><img id="macro" src="/static/img/home/logos/mit.png" /></a>
+    <a target="_blank" href="http://www.datawheel.us/"><img id="datawheel"
+        src="/static/img/home/logos/datawheel.png" /></a>
+  </div>
+
+  <script>var cartBoxes = [];</script>
+  <div class="feed-flex">
+    <div id="feed" class="carousel rank-0 primary">
+      <h3 class="carousel-title">
+        <a href="/map"> <img class="icon" src="/static/img/icons/demographics.svg" />
+          Maps
+        </a> </h3>
+
+      <a href="/map/?level=state&amp;key=opioid_overdose_deathrate_ageadjusted" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image"
+            style="background-image:url('/static/img/home/maps/opioid_overdose_deathrate_ageadjusted.png');"></div>
+          <div class="feed-box-title">Opioid Overdose Death Rate (Age-Adjusted) by state</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/map/?level=county&amp;key=default_rate,num_borrowers,num_defaults" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/home/maps/default_rate.png');"></div>
+          <div class="feed-box-title">Default Rate by county</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/map/?level=state&amp;key=non_medical_use_of_pain_relievers" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image"
+            style="background-image:url('/static/img/home/maps/non_medical_use_of_pain_relievers.png');"></div>
+          <div class="feed-box-title">Nonmedical Pain Reliever Usage by state</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/map/?level=county&amp;key=total_reimbursements_b" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/home/maps/total_reimbursements_b.png');">
+          </div>
+          <div class="feed-box-title">Medicare Reimbursements by county</div>
+        </div>
+      </a>
+      <a href="/map/?level=county&amp;key=income_below_poverty:pop_poverty_status,income_below_poverty,income_below_poverty_moe,pop_poverty_status,pop_poverty_status_moe"
+        class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/home/maps/income_below_poverty.png');">
+          </div>
+          <div class="feed-box-title">Poverty Rate by county</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/map">110 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-university primary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=university"> <img class="icon" src="/static/img/icons/university.svg" />
+          Universities
+        </a> </h3>
+
+      <a href="/profile/university/massachusetts-institute-of-technology" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/166683/img');"></div>
+          <div class="feed-box-title">Massachusetts Institute of Technology</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/university-of-maryland-college-park" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/163286/img');"></div>
+          <div class="feed-box-title">University of Maryland-College Park</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/university-of-notre-dame" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/152080/img');"></div>
+          <div class="feed-box-title">University of Notre Dame</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/university-of-chicago" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/144050/img');"></div>
+          <div class="feed-box-title">University of Chicago</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/northeastern-university" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/167358/img');"></div>
+          <div class="feed-box-title">Northeastern University</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=university">7,358 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-0 primary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=geo"> <img class="icon" src="/static/img/icons/geo.svg" />
+          Cities &amp; Places
+        </a> </h3>
+
+      <a href="/profile/geo/new-york-ny" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/16000US3651000/img');"></div>
+          <div class="feed-box-title">New York, NY</div>
+        </div>
+      </a>
+      <a href="/profile/geo/los-angeles-county-ca" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/05000US06037/img');"></div>
+          <div class="feed-box-title">Los Angeles County, CA</div>
+        </div>
+      </a>
+      <a href="/profile/geo/florida" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/04000US12/img');"></div>
+          <div class="feed-box-title">Florida</div>
+        </div>
+      </a>
+      <a href="/profile/geo/suffolk-county-ma" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/05000US25025/img');"></div>
+          <div class="feed-box-title">Suffolk County, MA</div>
+        </div>
+      </a>
+      <a href="/profile/geo/illinois" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/04000US17/img');"></div>
+          <div class="feed-box-title">Illinois</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=geo">36,185 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-naics primary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=naics"> <img class="icon" src="/static/img/icons/naics.svg" />
+          Industries
+        </a> </h3>
+
+      <a href="/profile/naics/622" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/622/img');"></div>
+          <div class="feed-box-title">Hospitals</div>
+        </div>
+      </a>
+      <a href="/profile/naics/23" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/23/img');"></div>
+          <div class="feed-box-title">Construction</div>
+        </div>
+      </a>
+      <a href="/profile/naics/31-33" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/31-33/img');"></div>
+          <div class="feed-box-title">Manufacturing</div>
+        </div>
+      </a>
+      <a href="/profile/naics/722Z" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/722Z/img');"></div>
+          <div class="feed-box-title">Restaurants &amp; Food Services</div>
+        </div>
+      </a>
+      <a href="/profile/naics/44-45" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/44-45/img');"></div>
+          <div class="feed-box-title">Retail Trade</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=naics">296 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-soc primary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=soc"> <img class="icon" src="/static/img/icons/soc.svg" />
+          Jobs
+        </a> </h3>
+
+      <a href="/profile/soc/252020" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/252020/img');"></div>
+          <div class="feed-box-title">Elementary &amp; middle school teachers</div>
+        </div>
+      </a>
+      <a href="/profile/soc/151131" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/151131/img');"></div>
+          <div class="feed-box-title">Computer programmers</div>
+        </div>
+      </a>
+      <a href="/profile/soc/1110XX" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/1110XX/img');"></div>
+          <div class="feed-box-title">Chief executives &amp; legislators</div>
+        </div>
+      </a>
+      <a href="/profile/soc/412031" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/412031/img');"></div>
+          <div class="feed-box-title">Retail salespersons</div>
+        </div>
+      </a>
+      <a href="/profile/soc/291141" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/291141/img');"></div>
+          <div class="feed-box-title">Registered nurses</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=soc">520 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-cip primary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=cip"> <img class="icon" src="/static/img/icons/cip.svg" />
+          Degrees
+        </a> </h3>
+
+      <a href="/profile/cip/513801" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/513801/img');"></div>
+          <div class="feed-box-title">Registered Nursing</div>
+        </div>
+      </a>
+      <a href="/profile/cip/110701" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/110701/img');"></div>
+          <div class="feed-box-title">Computer Science</div>
+        </div>
+      </a>
+      <a href="/profile/cip/520201" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/520201/img');"></div>
+          <div class="feed-box-title">General Business Administration &amp; Management</div>
+        </div>
+      </a>
+      <a href="/profile/cip/420101" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/420101/img');"></div>
+          <div class="feed-box-title">General Psychology</div>
+        </div>
+      </a>
+      <a href="/profile/cip/240101" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/240101/img');"></div>
+          <div class="feed-box-title">Liberal Arts &amp; Sciences</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=cip">2,314 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-cart primary">
+      <h3 class="carousel-title">
+        <a href="/cart"> <img class="icon" src="/static/img/cart-big.png" />
+          Download
+        </a> </h3>
+
+      <div class="feed-box cart" data-index="0">
+        <script>cartBoxes.push({ 'url': 'https://everglades-api.datausa.io/api/?required=patients_diabetic_medicare_enrollees_65_75_lipid_test_total&show=geo&sumlevel=county&year=all', 'image': '/static/img/splash/naics/5417.jpg', 'slug': 'map_patients_diabetic_medicare_enrollees_65_75_lipid_test_total_ county', 'title': 'Diabetic Lipid Tests by County' })</script>
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/5417.jpg');"></div>
+          <div class="feed-box-title">Diabetic Lipid Tests by County</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="1">
+        <script>cartBoxes.push({ 'url': 'https://everglades-api.datausa.io/api/?required=adult_smoking&show=geo&sumlevel=state&year=all', 'image': '/static/img/splash/naics/3122.jpg', 'slug': 'map_adult_smoking_ state', 'title': 'Adult Smoking by State' })</script>
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/3122.jpg');"></div>
+          <div class="feed-box-title">Adult Smoking by State</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="2">
+        <script>cartBoxes.push({ 'url': 'https://everglades-api.datausa.io/api/?required=leg_amputations_per_1000_enrollees_total&show=geo&sumlevel=county&year=all', 'image': '/static/img/splash/naics/62.jpg', 'slug': 'map_leg_amputations_per_1000_enrollees_total_ county', 'title': 'Leg Amputations by County' })</script>
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/62.jpg');"></div>
+          <div class="feed-box-title">Leg Amputations by County</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="3">
+        <script>cartBoxes.push({ 'url': 'https://everglades-api.datausa.io/api/?required=pop%2Cpop_moe&show=geo&sumlevel=county&year=all', 'image': '/static/img/splash/cip/45.jpg', 'slug': 'map_pop_ county', 'title': 'Population by County' })</script>
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/cip/45.jpg');"></div>
+          <div class="feed-box-title">Population by County</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="4">
+        <script>cartBoxes.push({ 'url': 'https://everglades-api.datausa.io/api/?required=median_property_value%2Cmedian_property_value_moe&show=geo&sumlevel=county&year=all', 'image': '/static/img/splash/geo/05000US25019.jpg', 'slug': 'map_median_property_value_ county', 'title': 'Median Property Value by County' })</script>
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/geo/05000US25019.jpg');"></div>
+          <div class="feed-box-title">Median Property Value by County</div>
+        </div>
+      </div>
+      <div class="carousel-footer">
+        <a href="/cart">View Cart</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-story primary">
+      <h3 class="carousel-title">
+        <a href="/story/"> <img class="icon" src="/static/img/icons/about.svg" />
+          Latest Stories
+        </a> </h3>
+
+      <a href="/story/06-12-2017_opioid-addiction" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/cip/26.jpg');"></div>
+          <div class="feed-box-title">How far does damage from opioid addiction extend?</div>
+          <div class="feed-box-subtitle">By Weston Coward</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_poverty-health" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/cip/19.jpg');"></div>
+          <div class="feed-box-title">Poverty is bad for your health</div>
+          <div class="feed-box-subtitle">By Melissa Majerol</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_worker-evolution" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/111.jpg');"></div>
+          <div class="feed-box-title">The evolution of the American worker</div>
+          <div class="feed-box-subtitle">By Steve Davis</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_medicare-physicians" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/geo/31000US33100.jpg');"></div>
+          <div class="feed-box-title">Physicians earn top Medicare payments caring for Sunshine State seniors</div>
+          <div class="feed-box-subtitle">By Steve Davis</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_hardest-working" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/soc/472031.jpg');"></div>
+          <div class="feed-box-title">The hardest-working people in America</div>
+          <div class="feed-box-subtitle">By Zayd Derweesh</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/story/">14 more</a>
+      </div>
+    </div>
+  </div>
+  <div class="feed-flex">
+    <div id="feed" class="carousel rank-0 secondary">
+      <h3 class="carousel-title">
+        <a href="/map"> <img class="icon" src="/static/img/icons/demographics.svg" />
+          Maps
+        </a> </h3>
+
+      <a href="/map/?level=state&amp;key=opioid_overdose_deathrate_ageadjusted" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image"
+            style="background-image:url('/static/img/home/maps/opioid_overdose_deathrate_ageadjusted.png');"></div>
+          <div class="feed-box-title">Opioid Overdose Death Rate (Age-Adjusted) by state</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/map/?level=county&amp;key=default_rate,num_borrowers,num_defaults" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/home/maps/default_rate.png');"></div>
+          <div class="feed-box-title">Default Rate by county</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/map/?level=state&amp;key=non_medical_use_of_pain_relievers" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image"
+            style="background-image:url('/static/img/home/maps/non_medical_use_of_pain_relievers.png');"></div>
+          <div class="feed-box-title">Nonmedical Pain Reliever Usage by state</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/map/?level=county&amp;key=total_reimbursements_b" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/home/maps/total_reimbursements_b.png');">
+          </div>
+          <div class="feed-box-title">Medicare Reimbursements by county</div>
+        </div>
+      </a>
+      <a href="/map/?level=county&amp;key=income_below_poverty:pop_poverty_status,income_below_poverty,income_below_poverty_moe,pop_poverty_status,pop_poverty_status_moe"
+        class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/home/maps/income_below_poverty.png');">
+          </div>
+          <div class="feed-box-title">Poverty Rate by county</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/map">110 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-university secondary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=university"> <img class="icon" src="/static/img/icons/university.svg" />
+          Universities
+        </a> </h3>
+
+      <a href="/profile/university/massachusetts-institute-of-technology" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/166683/img');"></div>
+          <div class="feed-box-title">Massachusetts Institute of Technology</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/university-of-maryland-college-park" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/163286/img');"></div>
+          <div class="feed-box-title">University of Maryland-College Park</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/university-of-notre-dame" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/152080/img');"></div>
+          <div class="feed-box-title">University of Notre Dame</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/university-of-chicago" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/144050/img');"></div>
+          <div class="feed-box-title">University of Chicago</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <a href="/profile/university/northeastern-university" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/university/167358/img');"></div>
+          <div class="feed-box-title">Northeastern University</div>
+        </div>
+        <div class="feed-box-tag">New</div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=university">7,358 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-0 secondary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=geo"> <img class="icon" src="/static/img/icons/geo.svg" />
+          Cities &amp; Places
+        </a> </h3>
+
+      <a href="/profile/geo/new-york-ny" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/16000US3651000/img');"></div>
+          <div class="feed-box-title">New York, NY</div>
+        </div>
+      </a>
+      <a href="/profile/geo/los-angeles-county-ca" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/05000US06037/img');"></div>
+          <div class="feed-box-title">Los Angeles County, CA</div>
+        </div>
+      </a>
+      <a href="/profile/geo/florida" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/04000US12/img');"></div>
+          <div class="feed-box-title">Florida</div>
+        </div>
+      </a>
+      <a href="/profile/geo/suffolk-county-ma" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/05000US25025/img');"></div>
+          <div class="feed-box-title">Suffolk County, MA</div>
+        </div>
+      </a>
+      <a href="/profile/geo/illinois" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/geo/04000US17/img');"></div>
+          <div class="feed-box-title">Illinois</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=geo">36,185 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-naics secondary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=naics"> <img class="icon" src="/static/img/icons/naics.svg" />
+          Industries
+        </a> </h3>
+
+      <a href="/profile/naics/622" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/622/img');"></div>
+          <div class="feed-box-title">Hospitals</div>
+        </div>
+      </a>
+      <a href="/profile/naics/23" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/23/img');"></div>
+          <div class="feed-box-title">Construction</div>
+        </div>
+      </a>
+      <a href="/profile/naics/31-33" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/31-33/img');"></div>
+          <div class="feed-box-title">Manufacturing</div>
+        </div>
+      </a>
+      <a href="/profile/naics/722Z" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/722Z/img');"></div>
+          <div class="feed-box-title">Restaurants &amp; Food Services</div>
+        </div>
+      </a>
+      <a href="/profile/naics/44-45" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/naics/44-45/img');"></div>
+          <div class="feed-box-title">Retail Trade</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=naics">296 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-soc secondary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=soc"> <img class="icon" src="/static/img/icons/soc.svg" />
+          Jobs
+        </a> </h3>
+
+      <a href="/profile/soc/252020" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/252020/img');"></div>
+          <div class="feed-box-title">Elementary &amp; middle school teachers</div>
+        </div>
+      </a>
+      <a href="/profile/soc/151131" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/151131/img');"></div>
+          <div class="feed-box-title">Computer programmers</div>
+        </div>
+      </a>
+      <a href="/profile/soc/1110XX" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/1110XX/img');"></div>
+          <div class="feed-box-title">Chief executives &amp; legislators</div>
+        </div>
+      </a>
+      <a href="/profile/soc/412031" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/412031/img');"></div>
+          <div class="feed-box-title">Retail salespersons</div>
+        </div>
+      </a>
+      <a href="/profile/soc/291141" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/soc/291141/img');"></div>
+          <div class="feed-box-title">Registered nurses</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=soc">520 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-cip secondary">
+      <h3 class="carousel-title">
+        <a href="/search/?kind=cip"> <img class="icon" src="/static/img/icons/cip.svg" />
+          Degrees
+        </a> </h3>
+
+      <a href="/profile/cip/513801" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/513801/img');"></div>
+          <div class="feed-box-title">Registered Nursing</div>
+        </div>
+      </a>
+      <a href="/profile/cip/110701" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/110701/img');"></div>
+          <div class="feed-box-title">Computer Science</div>
+        </div>
+      </a>
+      <a href="/profile/cip/520201" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/520201/img');"></div>
+          <div class="feed-box-title">General Business Administration &amp; Management</div>
+        </div>
+      </a>
+      <a href="/profile/cip/420101" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/420101/img');"></div>
+          <div class="feed-box-title">General Psychology</div>
+        </div>
+      </a>
+      <a href="/profile/cip/240101" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/search/cip/240101/img');"></div>
+          <div class="feed-box-title">Liberal Arts &amp; Sciences</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/search/?kind=cip">2,314 more</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-cart secondary">
+      <h3 class="carousel-title">
+        <a href="/cart"> <img class="icon" src="/static/img/cart-big.png" />
+          Download
+        </a> </h3>
+
+      <div class="feed-box cart" data-index="0">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/5417.jpg');"></div>
+          <div class="feed-box-title">Diabetic Lipid Tests by County</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="1">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/3122.jpg');"></div>
+          <div class="feed-box-title">Adult Smoking by State</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="2">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/62.jpg');"></div>
+          <div class="feed-box-title">Leg Amputations by County</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="3">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/cip/45.jpg');"></div>
+          <div class="feed-box-title">Population by County</div>
+        </div>
+      </div>
+      <div class="feed-box cart" data-index="4">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/geo/05000US25019.jpg');"></div>
+          <div class="feed-box-title">Median Property Value by County</div>
+        </div>
+      </div>
+      <div class="carousel-footer">
+        <a href="/cart">View Cart</a>
+      </div>
+    </div>
+    <div id="feed" class="carousel rank-story secondary">
+      <h3 class="carousel-title">
+        <a href="/story/"> <img class="icon" src="/static/img/icons/about.svg" />
+          Latest Stories
+        </a> </h3>
+
+      <a href="/story/06-12-2017_opioid-addiction" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/cip/26.jpg');"></div>
+          <div class="feed-box-title">How far does damage from opioid addiction extend?</div>
+          <div class="feed-box-subtitle">By Weston Coward</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_poverty-health" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/cip/19.jpg');"></div>
+          <div class="feed-box-title">Poverty is bad for your health</div>
+          <div class="feed-box-subtitle">By Melissa Majerol</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_worker-evolution" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/naics/111.jpg');"></div>
+          <div class="feed-box-title">The evolution of the American worker</div>
+          <div class="feed-box-subtitle">By Steve Davis</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_medicare-physicians" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/geo/31000US33100.jpg');"></div>
+          <div class="feed-box-title">Physicians earn top Medicare payments caring for Sunshine State seniors</div>
+          <div class="feed-box-subtitle">By Steve Davis</div>
+        </div>
+      </a>
+      <a href="/story/06-12-2017_hardest-working" class="feed-box">
+        <div class="feed-box-contents">
+          <div class="feed-box-image" style="background-image:url('/static/img/splash/soc/472031.jpg');"></div>
+          <div class="feed-box-title">The hardest-working people in America</div>
+          <div class="feed-box-subtitle">By Zayd Derweesh</div>
+        </div>
+      </a>
+      <div class="carousel-footer">
+        <a href="/story/">14 more</a>
+      </div>
+    </div>
+  </div>
+</div>
