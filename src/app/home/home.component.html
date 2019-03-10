@@ -18,27 +18,26 @@
 </div>
 
 <section>
-    <div class="card headers">
-        <span *ngFor="let title of titles">{{title}} </span> 
+    <div class="card-header" *ngFor="let title of titles">
+      {{ title }}
+      <div
+        fxLayout="row"
+        fxLayout.md="column"
+        fxLayoutWrap
+        fxLayoutGap="1.0%"
+        fxLayoutAlign="center">
+        <mat-card class="card-picture" *ngFor="let picture of pictures">
+          <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <span fxFlex="80%">{{ picture.title }}</span>
+          </mat-card-title>
+          <img mat-card-image [src]="picture.img" />
+        </mat-card>
+      </div>
     </div>
-
-  <div
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutWrap
-    fxLayoutGap="0.5%"
-    fxLayoutAlign="center">
-    <mat-card class="card-picture" *ngFor="let picture of pictures">
-      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
-        <span fxFlex="80%">{{ picture.title }}</span>
-      </mat-card-title>
-      <img mat-card-image [src]="picture.img" />
-    </mat-card>
-  </div>
 </section>
 
 <div>
-    footer goes here.
+  footer goes here.
 </div>
 
 <!-- <iframe style="margin: 0 auto;height: -webkit-fill-available; width: 100%;" *ngIf="embeddedDashboard !== ''" [src]="embeddedDashboard"></iframe> -->
