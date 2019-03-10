@@ -18,14 +18,13 @@
 </div>
 
 <section>
-    <div class="card-header" *ngFor="let title of titles">
-      {{ title }}
-      <div
-        fxLayout="row"
-        fxLayout.md="column"
-        fxLayoutWrap
-        fxLayoutGap="1.0%"
-        fxLayoutAlign="center">
+  <div class="card-header"style="text-align:center" *ngFor="let title of titles">
+    {{ title }}
+
+    <div
+        fxLayout="column"
+        fxLayout.md="row"
+        fxLayoutWrap>
         <mat-card class="card-picture" *ngFor="let picture of pictures">
           <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
             <span fxFlex="80%">{{ picture.title }}</span>
@@ -33,7 +32,7 @@
           <img mat-card-image [src]="picture.img" />
         </mat-card>
       </div>
-    </div>
+  </div>
 </section>
 
 <div>
