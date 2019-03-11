@@ -46,19 +46,22 @@ export class HomeComponent implements OnInit {
       img: 'https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/X1UK6NLGRU.jpg'
     },
   ];
-  dashBoards: any = {testDashboard: '1a975f5a-faca-4d5f-a0fd-a6da4a904636'};
+  dashBoards: any = {testDashboard: '1a975f5a-faca-4d5f-a0fd-a6da4a904636', testDashboard2: '81c6c87f-6f3a-43f7-8b97-227b8db06607'};
   activeDashboard: string = 'testDashboard';
   embedURL: string = 'https://hlpu3yky42.execute-api.us-east-1.amazonaws.com/LATEST/getDashboardEmbedURL?username=TestUser&password=TestUser01!&dashboardId=';
   embeddedDashboard: any = '';
+  state: string = '';
   ngOnInit() {
-    this.getDashboard('testDashboard');
+    //this.getDashboard('testDashboard');
   }
 
-  getDashboard(dashboard){
+  getDashboard(dashboard, filterType, filterValue){
+    let embedURL = '';
     this.activeDashboard = dashboard;
-    this.http.get(this.embedURL+this.dashBoards[dashboard]).subscribe(data=>{
+    embedURL = this.embedURL+this.dashBoards[dashboard];
+    this.http.get(embedURL).subscribe(data=>{
       console.log(data);
-      this.embeddedDashboard = this.sanitizer.bypassSecurityTrustResourceUrl(data['EmbedUrl']);
+      this.embeddedDashboard = this.sanitizer.bypassSecurityTrustResourceUrl(data['EmbedUrl']+'#p.'+filterType+'='+filterValue);
     });
   }
 }

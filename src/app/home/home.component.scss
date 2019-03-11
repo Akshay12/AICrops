@@ -4669,12 +4669,7 @@ body {
     -webkit-transition: opacity 0.1s;
     transition: opacity 0.1s;
   }
-  &.profile .viz-btn.add-to-cart::before, &.map .viz-btn.add-to-cart::before, &.story .viz-btn.add-to-cart::before {
-    background-image: url("/static/img/viz/add-to-cart.svg");
-  }
-  &.profile .viz-btn.add-to-cart:hover::before, &.map .viz-btn.add-to-cart:hover::before, &.story .viz-btn.add-to-cart:hover::before {
-    background-image: url("/static/img/viz/add-to-cart-red.svg");
-  }
+
   &.profile .viz-btn.add-to-cart::after, &.map .viz-btn.add-to-cart::after, &.story .viz-btn.add-to-cart::after {
     content: "Add Data to Cart";
   }

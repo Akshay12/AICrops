@@ -39,7 +39,7 @@
   footer goes here.
 </div>
 -->
-<!-- <iframe style="margin: 0 auto;height: -webkit-fill-available; width: 100%;" *ngIf="embeddedDashboard !== ''" [src]="embeddedDashboard"></iframe> -->
+<iframe style="margin: 0 auto;height: -webkit-fill-available; width: 100%;" *ngIf="embeddedDashboard !== ''" [src]="embeddedDashboard"></iframe>
 <div class="home">
   <nav>
     <div id="top-nav">
@@ -142,7 +142,7 @@
     <section class="home-desc new">
       <h1 class="white">Crop.AI</h1>
       <h2 class="tagline">
-        Search by county, state, or crop
+        Explore trends, profitability, and seasonalities
       </h2>
     </section>
     <section class="search-home-container new">
@@ -273,12 +273,12 @@
           <div class="feed-box-title">Los Angeles County, CA</div>
         </div>
       </a>
-      <a href="/profile/geo/florida" class="feed-box">
+      <div class="feed-box">
         <div class="feed-box-contents">
           <div class="feed-box-image" style="background-image:url('/search/geo/04000US12/img');"></div>
-          <div class="feed-box-title">Florida</div>
+          <div (click)="getDashboard('testDashboard2', 'State', 'FL')" class="feed-box-title">Florida</div>
         </div>
-      </a>
+      </div>
       <a href="/profile/geo/suffolk-county-ma" class="feed-box">
         <div class="feed-box-contents">
           <div class="feed-box-image" style="background-image:url('/search/geo/05000US25025/img');"></div>
